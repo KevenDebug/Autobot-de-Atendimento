@@ -6,27 +6,23 @@ import time
 import requests
 
 
-# ===================== CONFIG =====================
-webhook_url = "https://webhook.solucoestech.org/webhook/44163ef9-f8e2-4ecf-b930-b01866b06dbb"
+\\webhook_url = "webwook"
 mensagens_enviadas = set()
 log_file = "log_mensagens.txt"
 
 
-# ===================== LOG =====================
 def escrever_log(texto):
     with open(log_file, "a", encoding="utf-8") as arquivo:
         arquivo.write(f"{texto}\n")
     print(texto)
 
 
-# ===================== DRIVER =====================
 navegador = webdriver.Chrome()
 wait = WebDriverWait(navegador, 30)
 
 navegador.get("https://impactoautomacao.com.br/suporte")
 
 
-# ===================== FUNÇÕES =====================
 def entrar_no_iframe_chat(driver, timeout=30):
     wait_local = WebDriverWait(driver, timeout)
     iframe = wait_local.until(
@@ -62,7 +58,6 @@ botao_iniciar = wait.until(
 botao_iniciar.click()
 
 
-# ===================== FLUXO INICIAL =====================
 campo_nome = wait.until(
     EC.presence_of_element_located(
         (By.XPATH, "//input[@name='fullName']")
@@ -120,7 +115,6 @@ botao = wait.until(
 )
 botao.click()
 
-# ===================== SELECIONAR SUPORTE =====================
 
 def esperar_botao_suporte():
     wait.until(
@@ -173,3 +167,4 @@ while True:
         escrever_log(f"Erro no monitoramento: {e}")
 
     time.sleep(5)
+
