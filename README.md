@@ -1,10 +1,10 @@
-# 🤖 Autobot de Atendimento
+# Autobot de Atendimento
 
 Bot de atendimento automatizado que monitora um chat de suporte em tempo real, encaminha mensagens para um fluxo de IA no **N8N** e responde automaticamente com base em uma base de conhecimento configurada.
 
 ---
 
-## 📋 Sobre o Projeto
+## Sobre o Projeto
 
 O Autobot de Atendimento é uma solução de automação desenvolvida em Python com Selenium que simula um atendente humano em um widget de chat ao vivo. O bot:
 
@@ -18,7 +18,7 @@ O Autobot de Atendimento é uma solução de automação desenvolvida em Python 
 
 ---
 
-## 🧰 Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 | Tecnologia | Finalidade |
 |---|---|
@@ -29,7 +29,7 @@ O Autobot de Atendimento é uma solução de automação desenvolvida em Python 
 
 ---
 
-## ⚙️ Pré-requisitos
+## Pré-requisitos
 
 - Python 3.8+
 - Google Chrome instalado
@@ -39,7 +39,7 @@ O Autobot de Atendimento é uma solução de automação desenvolvida em Python 
 
 ---
 
-## 📦 Instalação
+## Instalação
 
 1. **Clone o repositório:**
    ```bash
@@ -58,7 +58,7 @@ O Autobot de Atendimento é uma solução de automação desenvolvida em Python 
 
 ---
 
-## 🔧 Configuração
+## Configuração
 
 No arquivo principal do bot, localize e ajuste as seguintes variáveis:
 
@@ -73,7 +73,7 @@ campo_cnpj.send_keys("00.000.000/0001-00")
 campo_telefone.send_keys("00000000000")
 ```
 
-> ⚠️ **Importante:** O webhook do N8N deve estar configurado para receber um JSON com o campo `"mensagem"` e retornar um JSON com o campo `"output"` contendo a resposta gerada pela IA.
+>  **Importante:** O webhook do N8N deve estar configurado para receber um JSON com o campo `"mensagem"` e retornar um JSON com o campo `"output"` contendo a resposta gerada pela IA.
 
 ### Exemplo de payload enviado ao N8N:
 ```json
@@ -91,7 +91,7 @@ campo_telefone.send_keys("00000000000")
 
 ---
 
-## ▶️ Como Executar
+## Como Executar
 
 ```bash
 python autobot.py
@@ -107,7 +107,7 @@ Todas as mensagens trocadas serão salvas no arquivo `log_mensagens.txt`.
 
 ---
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 Autobot-de-Atendimento/
@@ -119,7 +119,7 @@ Autobot-de-Atendimento/
 
 ---
 
-## 🔄 Fluxo de Funcionamento
+## Fluxo de Funcionamento
 
 ```
 Site de Suporte (Chat)
@@ -143,7 +143,7 @@ Site de Suporte (Chat)
 
 ---
 
-## 📝 Logs
+## Logs
 
 O bot registra todas as ações no arquivo `log_mensagens.txt`:
 
@@ -155,7 +155,7 @@ Erro no monitoramento: Message: no such element
 
 ---
 
-## ⚠️ Observações
+## Observações
 
 - O bot mantém um **controle de mensagens já enviadas** para evitar duplicatas.
 - Em caso de erro durante o monitoramento, o bot registra o erro e continua operando.
@@ -164,12 +164,12 @@ Erro no monitoramento: Message: no such element
 
 ---
 
-## 🤝 Contribuições
+## Contribuições
 
 Contribuições são bem-vindas! Sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*.
 
 ---
 
-## 👤 Autor
+## Autor
 
 Desenvolvido por [KevenDebug](https://github.com/KevenDebug)
