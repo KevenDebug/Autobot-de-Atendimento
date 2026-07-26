@@ -94,7 +94,7 @@ campo_telefone.send_keys("00000000000")
 ## Como Executar
 
 ```bash
-python autobot.py
+Consulta_Wook.py
 ```
 
 O bot irá:
